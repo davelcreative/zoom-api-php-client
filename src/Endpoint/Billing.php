@@ -24,7 +24,7 @@ class Billing extends Request {
     }
 
     public function updatePlan( string $accountID, array $query = [] ) {
-        return $this->put( "/accounts/{accountId}/plans/base", $query );
+        return $this->put( "accounts/{accountId}/plans/base", $query );
     }
 
 }
