@@ -19,24 +19,12 @@ class Billing extends Request {
         parent::__construct($apiKey, $apiSecret);
     }
 
-    /**
-     * getPlanInfo
-     *
-     * @param array $query
-     * @return array|mixed
-     */
     public function getPlan( string $accountID ) {
         return $this->get( "accounts/{accountId}/plans" );
     }
 
-    /**
-     * updatePlan
-     *
-     * @param array|null $data
-     * @return array|mixed
-     */
     public function updatePlan( string $accountID, array $query = [] ) {
         return $this->put( "/accounts/{accountId}/plans/base", $query );
     }
-    
+
 }
